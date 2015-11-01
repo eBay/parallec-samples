@@ -10,7 +10,7 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-package io.parallec.sample.app.http.request.template;
+package io.parallec.sample.app.http;
 
 import io.parallec.core.FilterRegex;
 import io.parallec.core.ParallecResponseHandler;
