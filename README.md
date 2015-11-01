@@ -1,7 +1,12 @@
-# parallec-samples
+<img alt="Parallec-logo" src="http://www.parallec.io/docs/img/parallec-logo.png" width="350">
+
+# [parallec-samples](http://www.parallec.io)
 
 
-##sample-apps 
+- [Sample Applications](#sample-apps)
+- [Sample Spark Server](#sample-spark-server)
+
+##sample-apps <a name="sample-apps"></a>
 ------
 Sample Applications demonstrate how to use parallec.io library. 
 
@@ -15,14 +20,40 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 |         [PING](https://github.com/eBay/parallec-samples/tree/master/sample-apps/src/main/java/io/parallec/sample/app/ping)        | Sample Parallel Ping App.                                                                                                                                                                                        |
 |         [TCP](https://github.com/eBay/parallec-samples/tree/master/sample-apps/src/main/java/io/parallec/sample/app/tcp)         | Sample Parallel TCP app. Provided a sample TCP Echo Server  to test with.                                                                                                                                        |
 
+###Usage
+
+You may simple fork the project, or copy and paste indivisual files after getting the correct dependencies 
+
+Maven
+
+```xml
+<dependency>
+	<groupId>io.parallec</groupId>
+	<artifactId>parallec-core</artifactId>
+	<version>0.9.0</version>
+</dependency>
+```
+
+Gradle
+
+```xml
+compile 'io.parallec:parallec-core:0.9.0'
+```
+
+
 #####Screenshots
 
-![Screenshot](http://www.parallec.io/images/screenshots/elastic-aggre-web3.png) after running Http3WebAgrregateToElasticSearchMinApp.
+Executing [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java), visualized in Kibana.
+
+With elasticsearch-1.3.4 and kibana-3.1.2
+
+![Screenshot](http://www.parallec.io/images/screenshots/elastic-aggre-web3.png) 
 
 
-##sample-spark-server
+##[sample-spark-server](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) <a name="sample-spark-server"></a>
+
 ------
-Sample Single File Web Server in Spark with Parallec . Require JDK 1.8+ due to Spark server.
+Sample [Single File](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) Web Server in Spark with Parallec . Require JDK 1.8+ due to Spark server.
  
 - SparkServer: http://sparkjava.com
 
@@ -70,8 +101,16 @@ Parallec: completed HTTP and sent to elastic search
 At 2015.11.01.10.15.47.398-0800
 ```	 
 
-End.
+Thanks for trying Parallec.io. Please submit a git issue for any questions you have.
  
+
+## Licenses
+
+Code licensed under Apache License v2.0
+
+© 2015 eBay Software Foundation
+
+
  
  
  
