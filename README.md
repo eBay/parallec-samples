@@ -1,6 +1,5 @@
-<img alt="Parallec-logo" src="http://www.parallec.io/docs/img/parallec-logo.png" width="350">
+<a href="http://www.parallec.io"><img alt="Parallec-logo" src="http://www.parallec.io/docs/img/parallec-logo.png" width="325"></a>
 
-# [parallec-samples](http://www.parallec.io)
 
 
 - [Sample Applications](#sample-apps)
@@ -8,10 +7,9 @@
 
 ##sample-apps <a name="sample-apps"></a>
 ------
-Sample Applications demonstrate how to use parallec.io library. 
+Sample Applications demonstrate how to use [parallec.io](http://www.parallec.io) library. 
 
 Each file is independent with a main function and can be run directly. (TCP/HTTP Async API requires the sample servers to start in advance, Sample servers included here as singel file runnable too).
-
 
 | Sample App Location | Overview                                                                                                                                                                                                         |
 |:-------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -58,15 +56,17 @@ Sample [Single File](https://github.com/eBay/parallec-samples/blob/master/sample
 - SparkServer: http://sparkjava.com
 
 ####Build & Run
-Build:
+######Build:
+
+Fork the project and run:
 
 	mvn clean compile assembly:single
 
-Run: in folder: parallec-samples/sample-spark-server/target: (if not conduct ping, no need of sudo)
+######Run: 
+In folder: parallec-samples/sample-spark-server/target: (if not conduct ping, no need of sudo)
 	
 	sudo java -jar parallec-sample-spark-server-0.9.0-jar-with-dependencies.jar
-	
-	
+
 
 #### Server APIs 
 
@@ -77,8 +77,12 @@ The APIs tries to get target hosts from a local file in the same path.
  get("/ssh/:filename/:concurrency/:showDetail"
 ```
 
-targetHostFile is relative to this path. If in IDE, put into the same folder as the pom.xml.
- * if run as jar. just same folder as the executable jar file.
+targetHostFile location: 
+
+- If in IDE, put into the same folder as the pom.xml.
+- If run as jar. just same folder as the executable jar file.
+
+APIs:
 
 - localhost:4567/ssh/targetHostFile/200/true  (require update login user/password)
 - localhost:4567/ping/targetHostFile  ; need root
