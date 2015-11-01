@@ -16,6 +16,8 @@ import org.elasticsearch.client.Client;
  * Sample results visualized in Kibana as in:
  * http://www.parallec.io/images/screenshots/elastic-aggre-web3.png
  * 
+ * Assuming local elasticsearch-1.3.4  + kibana-3.1.2 running with default basic setup.
+ * 
  * hitting
  * http://www.parallec.io/validateInternals.html
  * http://www.jeffpei.com/validateInternals.html
@@ -49,7 +51,7 @@ public class Http3WebAgrregateToElasticSearchMinApp {
 						metricMap.put("NodeGroupType", "Web3");
 						System.out.println("cpu:" + cpu + " host: " + res.getHost() );
 						Client client = (Client) responseContext.get("Client");
-						client.prepareIndex("local", "vi", res.getHost()).setSource(metricMap).execute();
+						client.prepareIndex("local", "parallec", res.getHost()).setSource(metricMap).execute();
 					}
 				});
 		node.close(); pc.releaseExternalResources();
