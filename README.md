@@ -32,10 +32,10 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 - [HttpDiffRequestsDiffServersApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsDiffServersApp.java): Different requests to different target URLs. Request template.
 - [HttpDiffRequestsSameServerApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsSameServerApp.java): Different requests to same target server. Request template. setReplaceVarMapToSingleTargetSingleVar().
 
-- [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](HttpServerSampleAsyncApiWithPollableJob) first)
+- [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
 
 ####Set Target Hosts
-please refer to the documentation. 
+Please refer to the documentation to set target hosts differently. 
 
 ###Usage
 
