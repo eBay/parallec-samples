@@ -9,7 +9,7 @@
 ------
 Sample Applications demonstrate how to use [parallec.io](http://www.parallec.io) library. 
 
-Each file is independent with a main function and can be run directly. (TCP/HTTP Async API requires the sample servers to start in advance, Sample servers included here as singel file runnable too).
+Each file is independent with a main function and can be run directly. (TCP/HTTP Async API requires the sample HTTP/TCP servers to start in advance. Sample servers included here are independent executable files too).
 
 | Sample App Location | Overview                                                                                                                                                                                                         |
 |:-------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
