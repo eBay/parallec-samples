@@ -106,7 +106,14 @@ At 2015.11.01.10.15.47.398-0800
 ```	 
 
 Thanks for trying Parallec.io. Please submit a git issue for any questions you have.
- 
+
+## Author and Contributors
+#### Original Author
+Yuanteng (Jeff) Pei
+
+#### Contributors
+
+Your name here
 
 ## Licenses
 
