@@ -1,7 +1,5 @@
 <a href="http://www.parallec.io"><img alt="Parallec-logo" src="http://www.parallec.io/images/parallec-logo.png" width="325"></a>
 
-
-
 - [Sample Applications](#sample-apps)
 - [Sample Spark Server](#sample-spark-server)
 
@@ -25,7 +23,7 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 
 - [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use async mode to run a parallel task, and then poll the progress and show an aggregation on status code.
 
-- [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=sDIP_Ujxkl4)
+- [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=QcavegPMDms)
 
 - [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java): Usage of FilterRegex.
 

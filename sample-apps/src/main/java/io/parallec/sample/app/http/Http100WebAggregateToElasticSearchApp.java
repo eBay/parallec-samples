@@ -35,6 +35,7 @@ public class Http100WebAggregateToElasticSearchApp {
         HashMap<String, Object> responseContext = new HashMap<String, Object>();
         responseContext.put("Client", node.client());
         pc.prepareHttpGet("")
+                .setConcurrency(1000)
                 .setTargetHostsFromLineByLineText("http://www.parallec.io/userdata/sample_target_hosts_top100_old.txt",
                          HostsSourceType.URL)
                 .setResponseContext(responseContext)
