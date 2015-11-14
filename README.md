@@ -3,13 +3,13 @@
 - [Sample Applications](#sample-apps)
 - [Sample Spark Server](#sample-spark-server)
 
-##sample-apps <a name="sample-apps"></a>
+##Parallec Sample Applications <a name="sample-apps"></a>
 ------
-Sample Applications demonstrate how to use [parallec.io](http://www.parallec.io) library. 
+Sample Applications demonstrate how to use [parallec.io](http://www.parallec.io) library, such as aggregate APIs and publish to Elastic Search and Kafka. 
 
 Each file is independent with a main function and can be run directly. (TCP/HTTP Async API requires the sample HTTP/TCP servers to start in advance. Sample servers included here are independent executable files too).
 
-**More** comprehensive examples are available in the [test cases](https://github.com/eBay/parallec/tree/master/src/test/java/io/parallec/core).
+**More comprehensive examples** are available in the [test cases](https://github.com/eBay/parallec/tree/master/src/test/java/io/parallec/core). Such as cancel tasks. Capacity aware scheduler and etc. 
 
 | Sample App Location | Overview                                                                                                                                                                                                         |
 |:-------------------:|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -19,18 +19,20 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 |         [TCP](https://github.com/eBay/parallec-samples/tree/master/sample-apps/src/main/java/io/parallec/sample/app/tcp)         | Sample Parallel TCP app. Includes a sample [TCP Echo Server](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/tcp/sampleserver/TcpEchoServer.java)  to test with.                                                                                                                                        |
 
 ####HTTP <a name="http"></a>
-- [HttpBasicMinimumApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicMinimumApp.java): 10 lines minimum example of hitting 3 websites.
+- Basic [HttpBasicMinimumApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicMinimumApp.java): 10 lines minimum example of hitting 3 websites.
 
-- [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use async mode to run a parallel task, and then poll the progress and show an aggregation on status code.
+- Async [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use async mode to run a parallel task, and then poll the progress and show an aggregation on status code.
 
-- [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=QcavegPMDms)
+- Aggregate to Elastic Search [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=QcavegPMDms)
 
-- [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java): Usage of FilterRegex.
+- Aggregate to Kafka [Http100WebAggregateToKafkaApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToKafkaApp.java): Hitting 100 common websites to get these status code to kafka. Usage of response context to pass kafka client. You may use the included Kafka Receiver to validated. Check pom.xml to see which version of kafka we use. Simple fork this and change HOSTNAME to point to your kafka server to work. Have tested with our kafka server and receiver.
 
-- [HttpDiffRequestsDiffServersApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsDiffServersApp.java): Different requests to different target URLs. Request template.
-- [HttpDiffRequestsSameServerApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsSameServerApp.java): Different requests to same target server. Request template. setReplaceVarMapToSingleTargetSingleVar().
+- Filter Response with Regular Expression [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java): Usage of FilterRegex.
 
-- [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
+- Request Template [HttpDiffRequestsDiffServersApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsDiffServersApp.java): Different requests to different target URLs. Request template.
+- Request Template [HttpDiffRequestsSameServerApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsSameServerApp.java): Different requests to same target server. Request template. setReplaceVarMapToSingleTargetSingleVar().
+
+- Progress Polling and Async APIs [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
 
 ####Set Target Hosts
 Please refer to the documentation to set target hosts differently. 
@@ -65,7 +67,7 @@ With elasticsearch-1.3.4 and kibana-3.1.2
 ![Screenshot](http://www.parallec.io/images/screenshots/elastic-aggre-web3.png) 
 
 
-##[sample-spark-server](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) <a name="sample-spark-server"></a>
+##[Sample Spark Server](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) <a name="sample-spark-server"></a>
 
 ------
 Sample [Single File](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) Web Server in Spark with Parallec . Require JDK 1.8+ due to Spark server.

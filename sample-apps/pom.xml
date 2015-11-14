@@ -16,6 +16,12 @@
 			<version>0.8.12-beta</version>
 		</dependency>
 
+        <dependency>
+          <groupId>org.apache.kafka</groupId>
+          <artifactId>kafka_2.10</artifactId>
+          <version>0.8.2.1</version>
+        </dependency>
+        
 		<dependency>
 			<groupId>org.elasticsearch</groupId>
 			<artifactId>elasticsearch</artifactId>
