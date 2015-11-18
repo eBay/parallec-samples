@@ -47,14 +47,14 @@ Maven
 <dependency>
 	<groupId>io.parallec</groupId>
 	<artifactId>parallec-core</artifactId>
-	<version>0.9.0</version>
+	<version>0.9.1</version>
 </dependency>
 ```
 
 Gradle
 
 ```xml
-compile 'io.parallec:parallec-core:0.9.0'
+compile 'io.parallec:parallec-core:0.9.1'
 ```
 
 
