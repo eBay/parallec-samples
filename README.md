@@ -21,18 +21,18 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 ####HTTP <a name="http"></a>
 - Basic [HttpBasicMinimumApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicMinimumApp.java): 10 lines minimum example of hitting 3 websites.
 
-- Async [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use async mode to run a parallel task, and then poll the progress and show an aggregation on status code.
+- Async [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use **async mode** to run a parallel task, and then **poll the progress** and show an aggregation on status code.
 
-- Aggregate to Elastic Search [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=QcavegPMDms)
+- Aggregate to **Elastic Search** [Http100WebAggregateToElasticSearchApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToElasticSearchApp.java): Hitting 100 common websites to get these status code to elastic search, and visualized in Kibana in 20 lines. Usage of response context to pass elastic search client [demo video](https://www.youtube.com/watch?v=QcavegPMDms)
 
-- Aggregate to Kafka [Http100WebAggregateToKafkaApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToKafkaApp.java): Hitting 100 common websites to get these status code to kafka. Usage of response context to pass kafka client. You may use the included Kafka Receiver to validated. Check pom.xml to see which version of kafka we use. Simple fork this and change HOSTNAME to point to your kafka server to work. Have tested with our kafka server and receiver.
+- Aggregate to **Kafka** [Http100WebAggregateToKafkaApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http100WebAggregateToKafkaApp.java): Hitting 100 common websites to get these status code to kafka. Usage of response context to pass kafka client. You may use the included Kafka Receiver to validated. Check pom.xml to see which version of kafka we use. Simple fork this and change HOSTNAME to point to your kafka server to work. Have tested with our kafka server and receiver.
 
 - Filter Response with Regular Expression [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java): Usage of FilterRegex.
 
-- Request Template [HttpDiffRequestsDiffServersApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsDiffServersApp.java): Different requests to different target URLs. Request template.
+- **Request Template** [HttpDiffRequestsDiffServersApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsDiffServersApp.java): Different requests to different target URLs. Request template.
 - Request Template [HttpDiffRequestsSameServerApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpDiffRequestsSameServerApp.java): Different requests to same target server. Request template. setReplaceVarMapToSingleTargetSingleVar().
 
-- Progress Polling and Async APIs [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
+- **Auto Progress Polling and Async APIs** [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
 
 ####Set Target Hosts
 Please refer to the documentation to set target hosts differently. 
@@ -47,14 +47,14 @@ Maven
 <dependency>
 	<groupId>io.parallec</groupId>
 	<artifactId>parallec-core</artifactId>
-	<version>0.9.0</version>
+	<version>0.9.1</version>
 </dependency>
 ```
 
 Gradle
 
 ```xml
-compile 'io.parallec:parallec-core:0.9.0'
+compile 'io.parallec:parallec-core:0.9.1'
 ```
 
 
