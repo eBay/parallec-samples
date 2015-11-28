@@ -13,7 +13,7 @@
 		<dependency>
 			<groupId>io.parallec</groupId>
 			<artifactId>parallec-core</artifactId>
-			<version>0.8.12-beta</version>
+			<version>0.9.2</version>
 		</dependency>
 
         <dependency>
