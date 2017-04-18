@@ -3,7 +3,7 @@
 - [Sample Applications](#sample-apps)
 - [Sample Spark Server](#sample-spark-server)
 
-##Parallec Sample Applications <a name="sample-apps"></a>
+## Parallec Sample Applications <a name="sample-apps"></a>
 ------
 Sample Applications demonstrate how to use [parallec.io](http://www.parallec.io) library, such as aggregate APIs and publish to Elastic Search and Kafka. 
 
@@ -18,7 +18,7 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 |         [PING](https://github.com/eBay/parallec-samples/tree/master/sample-apps/src/main/java/io/parallec/sample/app/ping)        | Sample Parallel Ping App.                                                                                                                                                                                        |
 |         [TCP](https://github.com/eBay/parallec-samples/tree/master/sample-apps/src/main/java/io/parallec/sample/app/tcp)         | Sample Parallel TCP app. Includes a sample [TCP Echo Server](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/tcp/sampleserver/TcpEchoServer.java)  to test with.                                                                                                                                        |
 
-####HTTP <a name="http"></a>
+#### HTTP <a name="http"></a>
 - Basic [HttpBasicMinimumApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicMinimumApp.java): 10 lines minimum example of hitting 3 websites.
 
 - Async [HttpBasicAsyncRunProgressPollingApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpBasicAsyncRunProgressPollingApp.java): Use **async mode** to run a parallel task, and then **poll the progress** and show an aggregation on status code.
@@ -34,10 +34,10 @@ Each file is independent with a main function and can be run directly. (TCP/HTTP
 
 - **Auto Progress Polling and Async APIs** [HttpAsyncApiPollableJob.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/HttpAsyncApiPollableJob.java): demos to handle async APIs with auto progress polling. Task level concurrency control.  (require starts the [Sample Web Server with Async API](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/sampleserver/HttpServerSampleAsyncApiWithPollableJob.java) first)
 
-####Set Target Hosts
+#### Set Target Hosts
 Please refer to the documentation to set target hosts differently. 
 
-###Usage
+### Usage
 
 You may simple fork the project, or copy and paste indivisual files after getting the correct dependencies 
 
@@ -58,7 +58,7 @@ compile 'io.parallec:parallec-core:0.9.3'
 ```
 
 
-#####Screenshots
+##### Screenshots
 
 Executing [Http3WebAgrregateToElasticSearchMinApp.java](https://github.com/eBay/parallec-samples/blob/master/sample-apps/src/main/java/io/parallec/sample/app/http/Http3WebAgrregateToElasticSearchMinApp.java), visualized in Kibana.
 
@@ -67,21 +67,21 @@ With elasticsearch-1.3.4 and kibana-3.1.2
 ![Screenshot](http://www.parallec.io/images/screenshots/elastic-aggre-web3.png) 
 
 
-##[Sample Spark Server](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) <a name="sample-spark-server"></a>
+## [Sample Spark Server](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) <a name="sample-spark-server"></a>
 
 ------
 Sample [Single File](https://github.com/eBay/parallec-samples/blob/master/sample-spark-server/src/main/java/io/parallec/ebay/server/ParallecSparkServer.java) Web Server in Spark with Parallec . Require JDK 1.8+ due to Spark server.
  
 - SparkServer: http://sparkjava.com
 
-####Build & Run
-######Build:
+#### Build & Run
+###### Build:
 
 Fork the project and run:
 
 	mvn clean compile assembly:single
 
-######Run: 
+###### Run: 
 In folder: parallec-samples/sample-spark-server/target: (if not conduct ping, no need of sudo)
 	
 	sudo java -jar parallec-sample-spark-server-0.9.0-jar-with-dependencies.jar
@@ -107,7 +107,7 @@ APIs:
 - localhost:4567/ping/targetHostFile  ; need root
 - localhost:4567/http/targetHostFile :  use elastic search
 
-######Sample Output
+###### Sample Output
 
 http://localhost:4567/http/targetHostFile
 
